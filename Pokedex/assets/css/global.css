@@ -1,0 +1,29 @@
+
+
+*{
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f6f8fc;
+}
+
+.content {
+    /* rem  se baseia no tamanho da fonte*/
+    padding: 1rem;
+    background-color: white;
+    height: 100vh; /* a altura ocupa a tela toda */
+    width: 100vw;
+
+}
+
+@media screen and (min-width: 992px) {
+   .content{
+    max-width: 992px;
+    margin: 1rem auto;
+    height: auto;
+    border-radius: 1rem;
+   }
+}
+

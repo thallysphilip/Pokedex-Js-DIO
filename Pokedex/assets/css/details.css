@@ -1,0 +1,188 @@
+body#detail-body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.detail-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background-color 0.3s ease;
+}
+
+.pokemon-header {
+    padding: 2rem 1.5rem;
+    position: relative;
+    color: white;
+    padding-bottom: 180px; 
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.back-button {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.heart-icon {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name-row .name {
+    margin: 0;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.name-row .id {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.types-row {
+    margin-top: 0.5rem;
+}
+
+.types-row .types {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.types-row .types li {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 0.3rem 1rem;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+}
+
+.image-container {
+    position: absolute;
+    bottom: -40px; 
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+.image-container img {
+    height: 250px;
+    filter: drop-shadow(0 10px 10px rgba(0,0,0,0.2));
+}
+
+.pokemon-body {
+    background-color: white;
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+    padding: 3rem 2rem 2rem 2rem;
+    flex-grow: 1;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+}
+
+.tabs .tab {
+    color: #a0a0a0;
+    font-weight: bold;
+    font-size: 0.95rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.tabs .tab.active {
+    color: #303943;
+}
+
+.tabs .tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #6c79db; 
+}
+
+.tab-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-row {
+    display: flex;
+    align-items: center;
+}
+
+.info-row .label {
+    width: 35%;
+    color: #a0a0a0;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.info-row .value {
+    width: 65%;
+    color: #303943;
+    font-weight: 500;
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+/* Base colors similar to image */
+.detail-page.grass { background-color: #48d0b0; } 
+.detail-page.fire { background-color: #fb6c6c; } 
+.detail-page.water { background-color: #76bdfe; }
+.detail-page.bug { background-color: #a8b820; }
+.detail-page.normal { background-color: #a8a878; }
+.detail-page.poison { background-color: #a040a0; }
+.detail-page.electric { background-color: #ffd86f; }
+.detail-page.ground { background-color: #e0c068; }
+.detail-page.fairy { background-color: #ee99ac; }
+.detail-page.fighting { background-color: #c03028; }
+.detail-page.psychic { background-color: #f85888; }
+.detail-page.rock { background-color: #b8a038; }
+.detail-page.ghost { background-color: #705898; }
+.detail-page.ice { background-color: #98d8d8; }
+.detail-page.dragon { background-color: #7038f8; }
+.detail-page.dark { background-color: #705848; }
+.detail-page.steel { background-color: #b8b8d0; }
+.detail-page.flying { background-color: #a890f0; }
+
+@media screen and (min-width: 992px) {
+    .detail-page {
+        max-width: 500px;
+        margin: 0 auto;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+}
